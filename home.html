@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title> Home | pandanon.com</title>
+	<script src="D:\WT_project\jquery.min.js"></script>
+	
+	<link rel="icon" href="1.jpg" type="image/gif">	
+	
+	
+	
+	<style type="text/css">
+		
+		body
+		{
+
+			background-image : url("bg.jpg");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position : center;
+			background-size : cover;
+		}
+		
+		.main
+		{
+			list-style : none;
+			float : left;
+			margin-top : 20px;
+			margin-right : 10px;
+		}
+		.main li
+		{
+			display : inline-block;
+		}
+		
+		.main li a{
+			text-decoration : none;
+			color : Black;
+			padding : 5px 20px;
+			font-size : 30px;
+		}
+		
+		.main-nav
+		{
+			list-style : none;
+			float : left;
+			margin-top : 100px;
+			margin-right : 10px;
+		}
+
+		.main-nav li:hover
+		{
+
+			/*background-color :red;
+			color : red;*/
+		}
+	
+		
+		.main-nav li a
+		{
+			text-decoration : none;
+			color : black;
+			padding : 2px 20px;
+			font-size : 24px;
+		}
+
+		.row{
+			max-width : 1200px;
+			margin : auto;
+		}
+		
+		.main-footer
+		{
+			list-style : none;
+			margin-top : 60px;
+			margin-left : 95px;
+		}
+
+		.main-footer li
+		{
+			display:inline-block;
+		}
+		
+		.main-footer li a
+		{
+			text-decoration : none;
+			color : Black;
+			padding : 65px;
+			font-size : 24px;
+		}
+		
+		.v
+		{
+			top : 26%;
+			left : 18%;
+			position : absolute;
+			padding : 70px 30px;
+			background-color : white;
+			height:250px;
+		}
+		.img1:hover{
+			transform: scale(1.2,1.2);
+			transition: transform 1.5s;
+		}
+		.img2:hover{
+			transform: scale(1.2,1.2);
+			transition: transform 1.5s;
+		}
+		.img3:hover{
+			transform: scale(1.2,1.2);
+			transition: transform 1.5s;
+		}
+		.img4:hover{
+			transform: scale(1.2,1.2);
+			transition: transform 1.5s;
+		}
+		@media screen and (max-width: 700px)
+		{
+			body
+			{
+				background-image : url("bg4.jpg");
+			}
+		
+		}
+
+	</style>
+</head>
+
+<body>
+
+	
+					
+	<div class="c1">
+	
+	<header>
+	<b>
+
+		<div align="center">
+			<img src="1.jpg" class="rounded" width=6% height=9%></img> 
+				<font size=20>
+					<i>PANDANON<i> 
+				</font>
+			<img src="1.jpg" width=6% height=9%></img> 
+		</div>
+		
+		<div class="row" align="center">
+			<ul class="main-nav">
+				<li><a> <i>CATEGORIES<i> </a></li>						</br></br></br></br></br></br>
+				<li><a href="wildlife.html"> WildLife</a></li>		</br></br></br></br></br></br>
+				<li><a href="food.html"> Food </a></li>				</br></br></br></br></br></br>
+				<li><a href="landscape.html"> Landscape </a></li>	</br></br></br></br></br></br>
+				<li><a href="portrait.html"> Portrait </a></li>	 	</br>
+			</ul>
+		</div>
+		
+	</b>
+	</header>
+
+		<div id="c1">
+			<table align=center cellpadding=1>
+				<tr align=center> 
+					<td colspan=4> 
+						<marquee>
+							<font size=8>
+								<i>WELCOME'S YOU<i> 
+							</font>	
+						</marquee>	
+					</td>
+				</tr>
+						
+				<tr align=center> 
+					<td id="wild"> 
+						<a href="wildlife.html"><img src="a2.png" class="img1">
+						</a>
+										<br/><br/>	
+						<a href="wildlife.html" >
+							<i>WildLife<i>
+						</a>
+					</td>
+
+					<td > 
+						<a href="landscape.html"> <img src="l.jpg" class="img2">
+						 </a>
+							<br/><br/>
+						<a href="landscape.html" >
+							<i>Landscape<i>
+						</a> 
+					</td>
+				</tr>
+					
+				<tr align=center> 
+					<td>
+						<a href="food.html"> <img src="f1.jpg" class="img3"> 
+						</a>
+							<br/><br/>
+						<a href="food.html" >
+								<i>Food<i>
+						</a>
+					</td>
+					
+					<td> 
+						<a href="portrait.html"> <img src="p2.jpg" class="img4"> 
+						</a>
+								<br/><br/>
+						<a href="portrait.html">
+							<i>Portrait<i>
+						</a> 
+					</td>
+				</tr>
+				
+			</table>
+			</br>
+		</div>
+	
+		<div class="row">
+			<ul class="main-footer">
+				<li><a href="aboutus.html" > About Us </a></li>
+				<li><a href="contactus.html"> Contact Us </a></li>
+				<li><a href="feedback.html" > Feedback </a></li>
+				<li><a href="sitemap.html"> SiteMap </a></li>
+			</ul>
+		</div>
+	</div>
+	
+
+	<script>
+		
+		
+ 			$('.img1').mouseover(function()
+			{
+				var x = document.createElement("AUDIO");
+
+  			if (x.canPlayType("audio/mpeg")) 
+  			{
+  			
+    			x.setAttribute("src","lion.mp3");
+  			}
+
+  			else 
+  			{
+    			x.setAttribute("src","lion.ogg");
+  			}
+
+  			x.setAttribute("controls", "controls");
+  			x.setAttribute("autoplay","true");
+  			//document.body.appendChild(x);	
+			});
+		
+ 			$('.img2').mouseover(function()
+			{
+				var x = document.createElement("AUDIO");
+
+  			if (x.canPlayType("audio/mpeg")) 
+  			{
+  				
+    			x.setAttribute("src","forest.mp3");
+  			}
+
+  			else 
+  			{
+    			x.setAttribute("src","forest.ogg");
+  			}
+
+  			x.setAttribute("controls", "controls");
+  			x.setAttribute("autoplay","true");
+  			//document.body.appendChild(x);	
+			});
+
+			$('.img3').mouseover(function()
+			{
+				var x = document.createElement("AUDIO");
+
+  			if (x.canPlayType("audio/mpeg")) 
+  			{
+  				
+    			x.setAttribute("src","cake.mp3");
+  			}
+
+  			else 
+  			{
+    			x.setAttribute("src","cake.ogg");
+  			}
+
+  			x.setAttribute("controls", "controls");
+  			x.setAttribute("autoplay","true");
+  			//document.body.appendChild(x);	
+			});
+		
+
+			$('.img4').mouseover(function()
+			{
+				var x = document.createElement("AUDIO");
+
+  			if (x.canPlayType("audio/mpeg")) 
+  			{
+  				
+    			x.setAttribute("src","Baby.mp3");
+  			}
+
+  			else 
+  			{
+    			x.setAttribute("src","Baby.ogg");
+  			}
+
+  			x.setAttribute("controls", "controls");
+  			x.setAttribute("autoplay","true");
+  			//document.body.appendChild(x);	
+			});
+								
+ 		
+
+</script>
+		
+		
+	
+</html>

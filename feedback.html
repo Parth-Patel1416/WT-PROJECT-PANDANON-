@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Feedback | pandanon.com</title>
+	<link rel="icon" href="1.jpg" type="image/gif" >
+	<script src="D:\WT_project\jquery.min.js"></script>
+	
+	<style type="text/css">
+		
+		.hidden{
+		   visibility:hidden;
+		}
+	</style>
+	
+
+	<style type="text/css">
+	
+		body
+		{
+			background-image : url("bg3.jpg");
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position : center;
+			background-size : cover;
+		}
+		
+		.loginbox
+		{
+			width : 500px;
+			height : 548px;
+			animation : change 10s infinite;
+			background : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+			color : #fff;
+			top : 54%;
+			left : 28%;
+			position : absolute;
+			transform : translate(-50%,-50%);
+			box-sizing : border-box;
+			padding : 70px 30px;
+		}
+		
+		.fieldset
+		{
+			margin-top : 8px;
+		}
+		
+		.btn
+		{
+			padding : 8px 10px;
+			color: Black;
+			text-decoration : none;
+			font-size:1em;
+			margin-left : 68px;
+		}
+		
+		.btn:hover
+		{
+			background-color : black;
+			color : white;
+		}
+		
+		@keyframes change
+		{
+			0%{
+				background-color : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+				}
+			20%{
+				background-color : grey; opacity:0.7;
+				}
+			40%{
+				background-color : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+				}
+			60%{
+				background-color : light pink; opacity:0.7;
+				}
+			80%{
+				background-color : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+				}
+			100%{
+				background-color : brown; opacity:0.7;
+				}
+		}
+		.main
+		{
+			list-style : none;
+			float : left;
+			margin-top : 20px;
+			margin-right : 10px;
+		}
+		.main li
+		{
+			display : inline-block;
+		}
+		
+		.main li a{
+			text-decoration : none;
+			color : black;
+			padding : 5px 20px;
+			font-size : 30px;
+			transition : 0.4s ease;
+		}
+		.main li a:hover
+		{
+			background-color : black;
+			color : white;
+		}
+		
+		.main-nav
+		{
+			list-style : none;
+			float : right;
+			margin-top : 20px;
+			margin-right : 10px;
+		}
+
+		.main-nav li
+		{
+			display:inline-block;
+		}
+		
+		.main-nav li a
+		{
+			text-decoration : none;
+			color : black;
+			padding : 5px 20px;
+			font-size : 24px;
+			transition : 0.4s ease;
+		}
+
+		.main-nav li a:hover
+		{
+			background-color : black;
+			color : white;
+		}
+
+		.row{
+			max-width : 1200px;
+			margin : auto;
+		}
+		
+		.main-footer
+		{
+			list-style : none;
+			float : right;
+			margin-top : 559px;
+			margin-right : 10px;
+		}
+
+		.main-footer li
+		{
+			display:inline-block;
+		}
+		
+		.main-footer li a
+		{
+			text-decoration : none;
+			color : black;
+			padding : 5px 20px;
+			font-size : 24px;
+			transition : 0.4s ease;
+		}
+
+		.main-footer li a:hover
+		{
+			background-color : black;
+			color : white;
+		}
+		
+				
+	</style>
+</head>
+
+<body>
+	
+	<header>
+		<b>
+		<div>
+		<ul class="main">
+			<li><a href="home.html"> PANANON </li>
+		</ul>
+		</div>
+		
+		<div class="row">
+			<ul class="main-nav">
+				
+				<li><a href="wildlife.html"> WILDLIFE </a></li>
+				<li><a href="food.html"> FOOD </a></li>
+				<li><a href="landscape.html"> LANDSCAPE </a></li>
+				<li><a href="portrait.html"> PORTRAIT </a></li>
+			</ul>
+		</div>
+		</b>
+	</header>
+
+	<b><font size=5>
+	<div class="loginbox">
+		<form name="myform">					
+			<fieldset class="fieldset">
+				<legend> Feedback </legend>
+								
+				Name:     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+				<input type="text" name="username" placeholder="Enter your Name here." id="name">
+								
+								</br> 
+								</br>
+								
+				Email-ID : 
+				<input type="text" placeholder="email" name="email" id="Email"><label style="color: blue" ></label><br><br>
+								
+								
+								
+				Feedback :
+				<textarea rows="10" cols="20" wrap="hard" id="feed" ></textarea>
+								
+								</br> 
+								</br>
+								
+				<button class="btn">Submit</button>
+	
+				<input type="reset" value="  Reset" class="btn">
+			</fieldset>
+		</form>
+	</div>
+	</font></b>
+	<script type="text/javascript">
+	
+	$('button').click(function()
+	{
+		var flag=0;
+		var name=document.getElementById("name").value;
+		var feed=document.getElementById("feed").value;
+		if(name.length==0)
+		{
+			alert("Please Enter your name:");
+		}
+		else
+		{
+			flag++;
+		}
+		var email=document.getElementById("Email").value;
+		if(email.length==0)
+		{
+			alert("Please Enter the Email-ID");
+		}
+		else
+		{
+			if( /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/.test(email))
+			{
+				flag++;
+			}
+			else
+			{
+				alert("Invalid Email");
+			}	
+		}
+		if(feed.length==0)
+		{
+			alert("Please Enter your feedback");
+		}else
+		{
+			flag++;
+		}
+		if(flag==3)
+		{
+			alert("Feedback successfull");
+		}	
+		
+		
+	});
+	 
+	</script>
+
+		
+	<div class="row">
+		<ul class="main-footer">
+			<li><a href="aboutus.html" > About Us </a></li>
+			<li><a href="contactus.html"> Contact Us </a></li>
+			<li><a href="feedback.html" > Feedback </a></li>
+			<li><a href="sitemap.html"> SiteMap </a></li>
+		</ul>
+	</div>
+	
+</html>
